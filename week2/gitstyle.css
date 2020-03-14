@@ -1,0 +1,141 @@
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #292929;
+}
+
+.loginForm{
+    margin-left: 20px;
+    margin-top: 35px;
+}
+
+.mainPageContent{
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 1200px;
+    height: 600px;
+    background-color: #3A3A3A;
+}
+
+.mainPageText{
+    width: 500px;
+    height: 600px;
+    display: inline-block;
+    padding-top: 150px;
+}
+
+.mainPageForm{
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    display: inline-block;
+    float: right;
+    margin-right: 250px;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+.headerButtonsContainer{
+    width: 60%;
+    height: 70px;
+    padding-left: 50px;
+    display: inline-flex;
+    padding-top: 5px;
+}
+
+.headerLogoButton{
+    width: 64px;
+    height: 64px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 20px;
+    background-color: #292929;
+
+}
+
+.headerButtons{
+    width: 120px;
+    height: 70px;
+    margin-left: 10px;
+    background-color: #292929;
+    color: white;
+    border-width: 0px;
+}
+
+.formDiv{
+    width: 500px;
+    height: 70px;
+    display: inline-flex;
+    float: right;
+   
+    padding-top: 19px;
+}
+
+.spanSet{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.inputType{
+    width: 200px;
+    height: 40px;
+    background-color: #707070;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #D4D4D4;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: transparent;
+
+}
+
+.signIn{
+    width: 80px;
+    height: 40px;
+    background-color: #292929;
+}
+
+.signInBorder{
+    border-width: 0px;
+}
+.signUpBorder{
+    border-width: 2px;
+    border-radius: 4px;
+    border-color: white;
+}
+
+.inputs{
+    width: 350px;
+    height: 50px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: #D3D2D2;
+    font-size: 25px;
+}
+
+
+.signUpButton{
+    width: 350px;
+    height: 75px;
+    border-radius: 7px;
+    border-width: 1px;
+    background-color: #00B03D;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+    color: white;
+}
+
+.pSignUpStyle{
+    font-size: 15px;
+    margin-right: 25px;
+}
+
+
+::placeholder{
+    color: #D4D4D4;
+    font-size: 15px;
+    padding-left: 5px;
+}
