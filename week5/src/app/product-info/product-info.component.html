@@ -1,0 +1,36 @@
+<h2 class="productInfo">Product Info: ProductID: {{product.productID}}  CategoryID: {{product.categoryID}}</h2>
+
+<div class="element" *ngIf="product">
+
+  <h3>
+    <a [title]="product.name + ' details'" href="{{product.link}}" target="_blank">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <div class="imgs">
+    <img src="{{product.img[0]}}"  height="300px" width="300px" alt="">
+    <img src="{{product.img[1]}}"   height="300px" width="300px" alt="">
+    <img src="{{product.img[2]}}"   height="300px" width="300px" alt="">
+  </div>
+  
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <div class="rating">Rating: <span class="ratingNum">{{product.rating}}</span></div><br><br>
+  <div class="price">Price: ${{product.price}} </div><br><br>
+
+
+  <a [href]="'https://web.whatsapp.com/send?text=' + 'hey check it:  ' + product.link"  target="_blank"  type="button" rel="noopener noreferrer" class="ws_btn" (click)="share()"><button>SHARE</button></a>     
+
+  
+
+  <app-product-alerts
+  [product]="product"
+  (notify) = "onNotify(product)">
+  </app-product-alerts>
+
+  
+
+</div>
