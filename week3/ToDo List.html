@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <style>
+      .black-fon {
+        margin-bottom: 60px;
+        margin-left: 0px;
+        border: 1px solid black;
+        color: white;
+        background-color: black;
+        font-style: oblique;
+        font-size: 16px;
+      }
+
+      h1{
+        margin-left: 300px;
+        font-family: cursive;
+      }
+      #add{
+        background-color: lightblue;
+        height: 30px;
+        width: 60px;
+        margin-left: 40px;
+        border: 1px solid rgba(0,0,0,.1);
+        border-radius: 2px;
+        font-family: cursive;
+      }
+      #add:hover {
+        background-color: darkcyan;
+      }
+
+
+
+      #newTask{
+        margin-top: 43px;
+        margin-left: 350px;
+        width: 640px;
+        height: 30px;
+        font-family: cursive;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Remove margins and padding from the list */
+      ol {
+        margin-top: 43px;
+        margin-left: 350px;
+        width: 640px;
+        height: 30px;
+      }
+
+      /* Style the list items */
+      ol li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        background: rgb(238, 238, 238);
+        font-size: 18px;
+        transition: 0.2s;
+        font-family: cursive;
+
+    }
+    /* Darker background-color on hover */
+      ol li:hover {
+        background: rgb(221, 221, 221);
+      }
+
+      /* When clicked on, add a background color and strike out text */
+      ol li.checked {
+        background: rgb(136, 136, 136);
+        color: rgba(255, 255, 255, 0.589);
+        text-decoration: line-through;
+      }
+
+      /* Add a "checked" mark when clicked on */
+      ol li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: green;
+      color: green;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+}
+  
+    /* Style the close button */
+      .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+      }
+
+      .close:hover {
+      background-color: #36f4eb;
+      color: white;
+      }     
+
+
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="black-fon">
+      <h2>ToDo List</h2>
+    </div>
+    <h1>ToDo List</h1>
+    <input type="text" name="new" placeholder="New Task" id="newTask">
+    <button type="button" name="button" id="add" onclick="newElement()">Add</button>
+
+
+   
+    <ol id="target">
+      <!-- <li>KBTU</li>
+      <li class="checked">Go to the cinema</li>
+      <li>Don't waste money</li>
+      <li>Call to mom</li>
+      <li>Go to the gym</li>
+      <li>Be cool</li>
+      <li>Prepare to quizes</li>
+      <li>Clean up</li> -->
+    </ol>
+
+    <script>
+          // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementsByTagName("LI");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+      }
+          // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+      }}
+          // Add a "checked" symbol when clicking on a list item
+      var list = document.querySelector('ol');
+      list.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'LI') {
+      ev.target.classList.toggle('checked');
+      }
+      }, false);
+
+        // Create a new list item when clicking on the "Add" button
+      function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("newTask").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+      document.getElementById("target").appendChild(li);
+      }
+      document.getElementById("add").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+        }
+      }
+      
+    } 
+
+
+       
+      </script>
+  </body>
+</html>
