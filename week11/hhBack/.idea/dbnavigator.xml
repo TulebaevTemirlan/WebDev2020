@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -24,154 +24,70 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="d41e3fcf-03a8-4e25-92dc-9cada4329719">
-        <schema name="main" object-types="view, table, column" />
+      <connection connection-id="55518bf1-2137-414d-aa87-0e519d664034">
+        <schema name="main" object-types="view, constraint, table, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719">
-      <console name="db.sqlite" type="STANDARD" schema="main" session="Main">SELECT * FROM api_category;
-select * FROM api_product;
+    <connection id="55518bf1-2137-414d-aa87-0e519d664034">
+      <console name="db.sqlite3" type="STANDARD" schema="main" session="Main"><![CDATA[select * from api_vacancy;
+select * from api_company;
 
-insert into api_category(name) values('Phones');
-insert into api_category(name) values('Smart speakers');
-insert into api_category(name) values('Projectors');
-insert into api_category(name) values('All for voleyball');
+insert into api_company(name,description,city,address) values('Google','Future is near','London','Baker street,21');
+insert into api_company(name,description,city,address) values('Sony','Amazing sound','Seoul','Centre palace');
+insert into api_company(name,description,city,address) values('Amazon','From A to Z','Silicon Valley','Avenue 23');
+insert into api_company(name,description,city,address) values('Samsung','Unbelievable mind','Bangkoc','Street of Capital');
+insert into api_company(name,description,city,address) values('Space X','Space is ours','Washigton','White House');
 
---here will be 10 product for the first category (phones)
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone XL',799,1,1,' A large phone with one of the best screens');
+-- HERE WILL BE ALL VACANCIES
+ 
+-- here vacancions for  GOOGLE
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Web designer','To make prints and visualize people mind',234.45 ,1);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Cyber specialist','To protect our databases and servers',2344.34 ,1);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Senior-developer in Java','We do not know',1700.32 ,1);
+ 
+ -- here vacancions for SONY
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Tester with experience','To test new products',1000.43,2);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Creative person','To look at the problem from another point of vision',845.23 ,2);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('IT marketer','To sell our product with good procent of advertisement',500.0,2);
 
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone Mini',699,3,1,'A great phone with one of the best cameras');
+-- here vacancions for AMAZON
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Algorithm developer','To minimaze a risk of low Internet',2000.0,3);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Front-end developer','To improve our web-site',400.2,3);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('IT specialist','To carry about our servers',3500.43,3);
 
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone Standard',299,4,1,'');
+-- here vacancions for SAMSUNG
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Machine learning specialist','To make something amazing every year',5000 ,4);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Lawyer','To protect our Company from our enemies',4300.23,4);
+insert into api_vacancy(name, description, salary, company_id)
+ values ('Economist','To optimaze our tangeble expenses in the year',4232.53,4);
 
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone4 Standart',299,4,1,'A great phone4');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone5 Standart',299,4,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone6 Standart',699,5,1,'A normal phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone7 Standart',799,4,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone8 Standart',850,3,1,'A standard phone');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone9 Standart',900,3,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone5 Standart',1000,5,1,'The best phone in the world!');
-
---here will 10 products for SMART SPEAKERS
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('EWA супер-мини',14,5,2,'Водонепроницаемый Bluetooth динамик 2018 Япония лучший звук/бас качество EWA A106 Pro Портативный Динамик Bluetooth 5,0');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('HLTON LED ',5,3,2,' Беспроводной Bluetooth динамик мини музыкальный аудио сабвуфер TF USB FM радио громкоговоритель с микрофоном для телефона MP3');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Divoom Timebox Evo Bluetooth',54,4,2,'портативный динамик с будильником программируемый светодиодный дисплей для создания пиксельного искусства уникальный подарок');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Zealot S1',17.29,4,2,'Bluetooth динамик fm радио водонепроницаемый открытый велосипедный динамик Портативный беспроводной Колонка Бумбокс + фонарик + крепление для велосипеда');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Myolsd',16.46,5,2,'Стерео Мощный Bluetooth динамик беспроводной портативный динамик fm-радио TF USB MP3 музыкальный центр Bluetooth Колонка для телефона компьютера');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('JBL Go Smart 2',100.99,5,2,'Портативный Bluetooth IPX7 водонепроницаемый беспроводной громкий динамик стерео Музыка Интеллект аудио динамик с микрофоном');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Xiaomi Mi',41.24,2,2,'динамик Ai, Wi-Fi, Bluetooth, голосовой пульт дистанционного управления, портативный умный Домашний Светильник, музыкальный плеер, приложение Xiaoai для Android Iphone');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('BT501',19.38,5,2,'Беспроводной Bluetooth портативный динамик usb зарядка Bluetooth аудио стерео бас эффект расширение хранения FM Hands-free');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('TG 108',33.58,5,2,'портативный интеллектуальный беспроводной Bluetooth динамик стерео басовый эффект многофункциональный динамик Универсальный электронный продукт');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('GGMM Мини',33.49,1,2,'Bluetooth беспроводной портативный динамик 10 Вт HiFi DSP колонка с микрофоном карманный размер поддержка голосового ассистента 14H воспроизведение музыки ');
-----
-update api_product set category_id_id = 2 where id &gt; 10;
- ---
- -- here product from category 3 PROJECTORS
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('LEJIADA',26.88,3,3,'814 светодиодный мини-проектор портативный проектор с USB домашний медиа-проектор поддерживает плеер 1080P Встроенный динамик ');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('ALSTON M5 M5W Full HD 1080P',200,4,3,'проектор 4K 6500 люмен кинотеатр Proyector Beamer Android WiFi Bluetooth hdmi VGA AV USB с подарком');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('WZATCO C2',279.23,4,3,'4K Full HD 1080P светодиодный проектор Android 9,0 Wifi умный Домашний кинотеатр видео проэктор с цифровой коррекцией keystone');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Real tv M8S',219.87,5,3,'Full HD 1080P проектор 4K 6500 люмен кинопроектор проектор Android WiFi Bluetooth hdmi VGA AV USB');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('CRENOVA',191.73,4,3,'Новинка 2019 г.; проектор на базе Android с разрешением Full HD 1080 P; 6000 люменов; Android 7.1.2 OS; видео проектор; Поддержка 4K Dolby 2G 16G; проектор');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('BYINTEK UFO R19',499.99,5,3,'300 дюймов 3D Смарт Android WIFI видео светодиодный портативный мини HD DLP проектор для Full HD 1080P HDMI 4K Iphone 11');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('XGIMI H2',899,5,3,'1920*1080 dlp Full HD проектор 1350 ANSI люмен 3D проектор Поддержка 4K Android wifi мультимедийный проектор с технологией Bluetooth');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('AUN ',209.99,5,3,'Full HD проектор AKEY6S, TV Box $1,99, 1920x1080 P, 6800 люмен, Android 6,0 WIFI проектор, светодиодный проектор для 4K 3D домашнего кинотеатра');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Vivicine',438.85,4,3,'1080p 3D 4K проектор, Android WIFI HDMI USB Full HD мини ПК игра домашний кинотеатр проектор 12000 мАч батарея');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('POWERFUL',66.12,5,3,'Мощный Q5 светодиодный мини проектор 800*600 точек/дюйм поддержка 720P портативный проектор домашнего кинотеатра Beamer опционально Android WIFI Proyector');
-
-----------------
--- here all products from category 4 ALL FOR VOLEYBALL
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('UG Professtional Socks',2.56,5,4,'Элитные толстые спортивные носки нескользящие прочные скейтборд полотенце нижние носки чулок');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Mizuno',3.84,5,4,'1 пара, 2 шт., спортивные защитные наколенники для футбола, волейбола, баскетбола, губки, резиновые, хлопковые наколенники, спортивные наколенники, наколенники');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Kingsports',19.9,4,4,'Аниме Haikyuu! Karasuno High School #12 Yamaguchi Tadashi волейбольный клуб костюм для косплея Джерси Спортивная одежда Униформа M L XL XXL');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('China Sporting',12.99,4,4,'Популярный волейбол, mva300, супер твердое волокно, брендовый волейбол, соревнование, размер 5, бесплатный воздушный насос + Воздушная игла + сумка');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Тренировочный пояс для волейбола',10.35,5,4,'отличный тренировочный пояс, предотвращающий чрезмерное движение руки вверх, 2019');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('VSM5000',12.59,5,4,'размер 5, высокое качество волейбол, Спорт на открытом воздухе, обучение, бесплатный воздушный насос + игла + сумка');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Спортивная защитная лента для пальцев',1.67,5,4,'защита для пальцев, поддержка эластичной спортивной поддержки, волейбольные протекторы для пальцев для баскетбола');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Mикрофибры для волейбола ',15.19,5,4,'1 пара профессиональных упражнений для волейбола из микрофибры для волейбола, тренировочный инструмент для волейбола 8');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Tренировочная тактическая доска',12.13,3,4,'1 комплект, тренировочная тактическая доска для игры в волейбол, тренировочная доска, набор магнитных шахматных деталей, складная доска для тренировок, чехол из искусственной кожи');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Волейбольная сумка для волейбола',4,5,4,'Классная вещь , всегда удобно и есть много полезных отсеков и карманов');</console>
+-- here vacancions for SPACE X
+insert into api_vacancy(name, description, salary, company_id)
+ values('Bio-engineer','To research alive things in the space(Mars)',1000.23,5);
+insert into api_vacancy(name, description, salary, company_id)
+ values('Mechanic','To service our Rocket',2393.34,5);
+insert into api_vacancy(name, description, salary, company_id)
+ values('Rocket builder','To work on the missions with our team in the SPACE', 2342.31,5);]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719" />
+    <connection id="55518bf1-2137-414d-aa87-0e519d664034" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -196,9 +112,9 @@ values('Волейбольная сумка для волейбола',4,5,4,'К
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719" active="true">
+      <connection id="55518bf1-2137-414d-aa87-0e519d664034" active="true">
         <database>
-          <name value="db.sqlite" />
+          <name value="db.sqlite3" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -211,7 +127,7 @@ values('Волейбольная сумка для волейбола',4,5,4,'К
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week9\shopBack\db.sqlite3" schema="main" />
+            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week11\hhBack\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -23,155 +23,10 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="d41e3fcf-03a8-4e25-92dc-9cada4329719">
-        <schema name="main" object-types="view, table, column" />
-      </connection>
-    </loaded-nodes>
-  </component>
-  <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719">
-      <console name="db.sqlite" type="STANDARD" schema="main" session="Main">SELECT * FROM api_category;
-select * FROM api_product;
-
-insert into api_category(name) values('Phones');
-insert into api_category(name) values('Smart speakers');
-insert into api_category(name) values('Projectors');
-insert into api_category(name) values('All for voleyball');
-
---here will be 10 product for the first category (phones)
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone XL',799,1,1,' A large phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone Mini',699,3,1,'A great phone with one of the best cameras');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone Standard',299,4,1,'');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone4 Standart',299,4,1,'A great phone4');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone5 Standart',299,4,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone6 Standart',699,5,1,'A normal phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone7 Standart',799,4,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone8 Standart',850,3,1,'A standard phone');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone9 Standart',900,3,1,'A standard phone with one of the best screens');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Phone5 Standart',1000,5,1,'The best phone in the world!');
-
---here will 10 products for SMART SPEAKERS
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('EWA супер-мини',14,5,2,'Водонепроницаемый Bluetooth динамик 2018 Япония лучший звук/бас качество EWA A106 Pro Портативный Динамик Bluetooth 5,0');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('HLTON LED ',5,3,2,' Беспроводной Bluetooth динамик мини музыкальный аудио сабвуфер TF USB FM радио громкоговоритель с микрофоном для телефона MP3');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Divoom Timebox Evo Bluetooth',54,4,2,'портативный динамик с будильником программируемый светодиодный дисплей для создания пиксельного искусства уникальный подарок');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Zealot S1',17.29,4,2,'Bluetooth динамик fm радио водонепроницаемый открытый велосипедный динамик Портативный беспроводной Колонка Бумбокс + фонарик + крепление для велосипеда');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Myolsd',16.46,5,2,'Стерео Мощный Bluetooth динамик беспроводной портативный динамик fm-радио TF USB MP3 музыкальный центр Bluetooth Колонка для телефона компьютера');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('JBL Go Smart 2',100.99,5,2,'Портативный Bluetooth IPX7 водонепроницаемый беспроводной громкий динамик стерео Музыка Интеллект аудио динамик с микрофоном');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('Xiaomi Mi',41.24,2,2,'динамик Ai, Wi-Fi, Bluetooth, голосовой пульт дистанционного управления, портативный умный Домашний Светильник, музыкальный плеер, приложение Xiaoai для Android Iphone');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('BT501',19.38,5,2,'Беспроводной Bluetooth портативный динамик usb зарядка Bluetooth аудио стерео бас эффект расширение хранения FM Hands-free');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('TG 108',33.58,5,2,'портативный интеллектуальный беспроводной Bluetooth динамик стерео басовый эффект многофункциональный динамик Универсальный электронный продукт');
-
-insert into api_product(name,price,&quot;count&quot;,foreign_key_id,description)
-values('GGMM Мини',33.49,1,2,'Bluetooth беспроводной портативный динамик 10 Вт HiFi DSP колонка с микрофоном карманный размер поддержка голосового ассистента 14H воспроизведение музыки ');
-----
-update api_product set category_id_id = 2 where id &gt; 10;
- ---
- -- here product from category 3 PROJECTORS
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('LEJIADA',26.88,3,3,'814 светодиодный мини-проектор портативный проектор с USB домашний медиа-проектор поддерживает плеер 1080P Встроенный динамик ');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('ALSTON M5 M5W Full HD 1080P',200,4,3,'проектор 4K 6500 люмен кинотеатр Proyector Beamer Android WiFi Bluetooth hdmi VGA AV USB с подарком');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('WZATCO C2',279.23,4,3,'4K Full HD 1080P светодиодный проектор Android 9,0 Wifi умный Домашний кинотеатр видео проэктор с цифровой коррекцией keystone');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Real tv M8S',219.87,5,3,'Full HD 1080P проектор 4K 6500 люмен кинопроектор проектор Android WiFi Bluetooth hdmi VGA AV USB');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('CRENOVA',191.73,4,3,'Новинка 2019 г.; проектор на базе Android с разрешением Full HD 1080 P; 6000 люменов; Android 7.1.2 OS; видео проектор; Поддержка 4K Dolby 2G 16G; проектор');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('BYINTEK UFO R19',499.99,5,3,'300 дюймов 3D Смарт Android WIFI видео светодиодный портативный мини HD DLP проектор для Full HD 1080P HDMI 4K Iphone 11');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('XGIMI H2',899,5,3,'1920*1080 dlp Full HD проектор 1350 ANSI люмен 3D проектор Поддержка 4K Android wifi мультимедийный проектор с технологией Bluetooth');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('AUN ',209.99,5,3,'Full HD проектор AKEY6S, TV Box $1,99, 1920x1080 P, 6800 люмен, Android 6,0 WIFI проектор, светодиодный проектор для 4K 3D домашнего кинотеатра');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Vivicine',438.85,4,3,'1080p 3D 4K проектор, Android WIFI HDMI USB Full HD мини ПК игра домашний кинотеатр проектор 12000 мАч батарея');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('POWERFUL',66.12,5,3,'Мощный Q5 светодиодный мини проектор 800*600 точек/дюйм поддержка 720P портативный проектор домашнего кинотеатра Beamer опционально Android WIFI Proyector');
-
-----------------
--- here all products from category 4 ALL FOR VOLEYBALL
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('UG Professtional Socks',2.56,5,4,'Элитные толстые спортивные носки нескользящие прочные скейтборд полотенце нижние носки чулок');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Mizuno',3.84,5,4,'1 пара, 2 шт., спортивные защитные наколенники для футбола, волейбола, баскетбола, губки, резиновые, хлопковые наколенники, спортивные наколенники, наколенники');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Kingsports',19.9,4,4,'Аниме Haikyuu! Karasuno High School #12 Yamaguchi Tadashi волейбольный клуб костюм для косплея Джерси Спортивная одежда Униформа M L XL XXL');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('China Sporting',12.99,4,4,'Популярный волейбол, mva300, супер твердое волокно, брендовый волейбол, соревнование, размер 5, бесплатный воздушный насос + Воздушная игла + сумка');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Тренировочный пояс для волейбола',10.35,5,4,'отличный тренировочный пояс, предотвращающий чрезмерное движение руки вверх, 2019');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('VSM5000',12.59,5,4,'размер 5, высокое качество волейбол, Спорт на открытом воздухе, обучение, бесплатный воздушный насос + игла + сумка');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Спортивная защитная лента для пальцев',1.67,5,4,'защита для пальцев, поддержка эластичной спортивной поддержки, волейбольные протекторы для пальцев для баскетбола');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Mикрофибры для волейбола ',15.19,5,4,'1 пара профессиональных упражнений для волейбола из микрофибры для волейбола, тренировочный инструмент для волейбола 8');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Tренировочная тактическая доска',12.13,3,4,'1 комплект, тренировочная тактическая доска для игры в волейбол, тренировочная доска, набор магнитных шахматных деталей, складная доска для тренировок, чехол из искусственной кожи');
-
-insert into api_product(name,price,&quot;count&quot;,category_id_id,description)
-values('Волейбольная сумка для волейбола',4,5,4,'Классная вещь , всегда удобно и есть много полезных отсеков и карманов');</console>
-    </connection>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
-  </component>
-  <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -195,94 +50,7 @@ values('Волейбольная сумка для волейбола',4,5,4,'К
     <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
-    <connections>
-      <connection id="d41e3fcf-03a8-4e25-92dc-9cada4329719" active="true">
-        <database>
-          <name value="db.sqlite" />
-          <description value="" />
-          <database-type value="SQLITE" />
-          <config-type value="BASIC" />
-          <database-version value="3.23" />
-          <driver-source value="BUILTIN" />
-          <driver-library value="" />
-          <driver value="" />
-          <url-type value="FILE" />
-          <host value="localhost" />
-          <port value="1234" />
-          <database value="database" />
-          <files>
-            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week9\shopBack\db.sqlite3" schema="main" />
-          </files>
-          <type value="NONE" />
-          <user value="" />
-          <deprecated-pwd value="" />
-        </database>
-        <properties>
-          <auto-commit value="false" />
-        </properties>
-        <ssh-settings>
-          <active value="false" />
-          <proxy-host value="" />
-          <proxy-port value="22" />
-          <proxy-user value="" />
-          <deprecated-proxy-pwd value="" />
-          <auth-type value="PASSWORD" />
-          <key-file value="" />
-          <key-passphrase value="" />
-        </ssh-settings>
-        <ssl-settings>
-          <active value="false" />
-          <certificate-authority-file value="" />
-          <client-certificate-file value="" />
-          <client-key-file value="" />
-        </ssl-settings>
-        <details>
-          <charset value="UTF-8" />
-          <session-management value="true" />
-          <ddl-file-binding value="true" />
-          <database-logging value="false" />
-          <connect-automatically value="true" />
-          <restore-workspace value="true" />
-          <restore-workspace-deep value="true" />
-          <environment-type value="default" />
-          <idle-time-to-disconnect value="30" />
-          <idle-time-to-disconnect-pool value="5" />
-          <credential-expiry-time value="10" />
-          <max-connection-pool-size value="7" />
-          <alternative-statement-delimiter value="" />
-        </details>
-        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
-          <object-type-filter use-master-settings="true">
-            <object-type name="SCHEMA" enabled="true" />
-            <object-type name="USER" enabled="true" />
-            <object-type name="ROLE" enabled="true" />
-            <object-type name="PRIVILEGE" enabled="true" />
-            <object-type name="CHARSET" enabled="true" />
-            <object-type name="TABLE" enabled="true" />
-            <object-type name="VIEW" enabled="true" />
-            <object-type name="MATERIALIZED_VIEW" enabled="true" />
-            <object-type name="NESTED_TABLE" enabled="true" />
-            <object-type name="COLUMN" enabled="true" />
-            <object-type name="INDEX" enabled="true" />
-            <object-type name="CONSTRAINT" enabled="true" />
-            <object-type name="DATASET_TRIGGER" enabled="true" />
-            <object-type name="DATABASE_TRIGGER" enabled="true" />
-            <object-type name="SYNONYM" enabled="true" />
-            <object-type name="SEQUENCE" enabled="true" />
-            <object-type name="PROCEDURE" enabled="true" />
-            <object-type name="FUNCTION" enabled="true" />
-            <object-type name="PACKAGE" enabled="true" />
-            <object-type name="TYPE" enabled="true" />
-            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
-            <object-type name="ARGUMENT" enabled="true" />
-            <object-type name="DIMENSION" enabled="true" />
-            <object-type name="CLUSTER" enabled="true" />
-            <object-type name="DBLINK" enabled="true" />
-          </object-type-filter>
-          <object-name-filters />
-        </object-filters>
-      </connection>
-    </connections>
+    <connections />
     <browser-settings>
       <general>
         <display-mode value="TABBED" />
