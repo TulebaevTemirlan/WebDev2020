@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -25,13 +25,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="55518bf1-2137-414d-aa87-0e519d664034">
-        <schema name="main" object-types="view, constraint, table, index, column, dataset trigger" />
+        <schema name="main" object-types="view, column, table" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="55518bf1-2137-414d-aa87-0e519d664034">
-      <console name="db.sqlite3" type="STANDARD" schema="main" session="Main"><![CDATA[select * from api_vacancy;
+      <console name="db.sqlite3" type="STANDARD" schema="main" session="Main">select * from api_vacancy;
 select * from api_company;
 
 insert into api_company(name,description,city,address) values('Google','Future is near','London','Baker street,21');
@@ -80,7 +80,7 @@ insert into api_vacancy(name, description, salary, company_id)
 insert into api_vacancy(name, description, salary, company_id)
  values('Mechanic','To service our Rocket',2393.34,5);
 insert into api_vacancy(name, description, salary, company_id)
- values('Rocket builder','To work on the missions with our team in the SPACE', 2342.31,5);]]></console>
+ values('Rocket builder','To work on the missions with our team in the SPACE', 2342.31,5);</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
