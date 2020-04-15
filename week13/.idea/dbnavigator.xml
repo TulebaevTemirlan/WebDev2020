@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
+    <value-preview-text-wrapping value="true" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -23,71 +23,10 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="55518bf1-2137-414d-aa87-0e519d664034">
-        <schema name="main" object-types="column, table, view" />
-      </connection>
-    </loaded-nodes>
-  </component>
-  <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="55518bf1-2137-414d-aa87-0e519d664034">
-      <console name="db.sqlite3" type="STANDARD" schema="main" session="Main">select * from api_vacancy;
-select * from api_company;
-
-insert into api_company(name,description,city,address) values('Google','Future is near','London','Baker street,21');
-insert into api_company(name,description,city,address) values('Sony','Amazing sound','Seoul','Centre palace');
-insert into api_company(name,description,city,address) values('Amazon','From A to Z','Silicon Valley','Avenue 23');
-insert into api_company(name,description,city,address) values('Samsung','Unbelievable mind','Bangkoc','Street of Capital');
-insert into api_company(name,description,city,address) values('Space X','Space is ours','Washigton','White House');
-
--- HERE WILL BE ALL VACANCIES
- 
--- here vacancions for  GOOGLE
-insert into api_vacancy(name, description, salary, company_id)
- values ('Web designer','To make prints and visualize people mind',234.45 ,1);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Cyber specialist','To protect our databases and servers',2344.34 ,1);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Senior-developer in Java','We do not know',1700.32 ,1);
- 
- -- here vacancions for SONY
-insert into api_vacancy(name, description, salary, company_id)
- values ('Tester with experience','To test new products',1000.43,2);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Creative person','To look at the problem from another point of vision',845.23 ,2);
-insert into api_vacancy(name, description, salary, company_id)
- values ('IT marketer','To sell our product with good procent of advertisement',500.0,2);
-
--- here vacancions for AMAZON
-insert into api_vacancy(name, description, salary, company_id)
- values ('Algorithm developer','To minimaze a risk of low Internet',2000.0,3);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Front-end developer','To improve our web-site',400.2,3);
-insert into api_vacancy(name, description, salary, company_id)
- values ('IT specialist','To carry about our servers',3500.43,3);
-
--- here vacancions for SAMSUNG
-insert into api_vacancy(name, description, salary, company_id)
- values ('Machine learning specialist','To make something amazing every year',5000 ,4);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Lawyer','To protect our Company from our enemies',4300.23,4);
-insert into api_vacancy(name, description, salary, company_id)
- values ('Economist','To optimaze our tangeble expenses in the year',4232.53,4);
-
--- here vacancions for SPACE X
-insert into api_vacancy(name, description, salary, company_id)
- values('Bio-engineer','To research alive things in the space(Mars)',1000.23,5);
-insert into api_vacancy(name, description, salary, company_id)
- values('Mechanic','To service our Rocket',2393.34,5);
-insert into api_vacancy(name, description, salary, company_id)
- values('Rocket builder','To work on the missions with our team in the SPACE', 2342.31,5);</console>
-    </connection>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
-  </component>
-  <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="55518bf1-2137-414d-aa87-0e519d664034" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -111,94 +50,7 @@ insert into api_vacancy(name, description, salary, company_id)
     <recently-used-interfaces />
   </component>
   <component name="DBNavigator.Project.Settings">
-    <connections>
-      <connection id="55518bf1-2137-414d-aa87-0e519d664034" active="true">
-        <database>
-          <name value="db.sqlite3" />
-          <description value="" />
-          <database-type value="SQLITE" />
-          <config-type value="BASIC" />
-          <database-version value="3.23" />
-          <driver-source value="BUILTIN" />
-          <driver-library value="" />
-          <driver value="" />
-          <url-type value="FILE" />
-          <host value="localhost" />
-          <port value="1234" />
-          <database value="database" />
-          <files>
-            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week11\hhBack\db.sqlite3" schema="main" />
-          </files>
-          <type value="NONE" />
-          <user value="" />
-          <deprecated-pwd value="" />
-        </database>
-        <properties>
-          <auto-commit value="false" />
-        </properties>
-        <ssh-settings>
-          <active value="false" />
-          <proxy-host value="" />
-          <proxy-port value="22" />
-          <proxy-user value="" />
-          <deprecated-proxy-pwd value="" />
-          <auth-type value="PASSWORD" />
-          <key-file value="" />
-          <key-passphrase value="" />
-        </ssh-settings>
-        <ssl-settings>
-          <active value="false" />
-          <certificate-authority-file value="" />
-          <client-certificate-file value="" />
-          <client-key-file value="" />
-        </ssl-settings>
-        <details>
-          <charset value="UTF-8" />
-          <session-management value="true" />
-          <ddl-file-binding value="true" />
-          <database-logging value="false" />
-          <connect-automatically value="true" />
-          <restore-workspace value="true" />
-          <restore-workspace-deep value="true" />
-          <environment-type value="default" />
-          <idle-time-to-disconnect value="30" />
-          <idle-time-to-disconnect-pool value="5" />
-          <credential-expiry-time value="10" />
-          <max-connection-pool-size value="7" />
-          <alternative-statement-delimiter value="" />
-        </details>
-        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false">
-          <object-type-filter use-master-settings="true">
-            <object-type name="SCHEMA" enabled="true" />
-            <object-type name="USER" enabled="true" />
-            <object-type name="ROLE" enabled="true" />
-            <object-type name="PRIVILEGE" enabled="true" />
-            <object-type name="CHARSET" enabled="true" />
-            <object-type name="TABLE" enabled="true" />
-            <object-type name="VIEW" enabled="true" />
-            <object-type name="MATERIALIZED_VIEW" enabled="true" />
-            <object-type name="NESTED_TABLE" enabled="true" />
-            <object-type name="COLUMN" enabled="true" />
-            <object-type name="INDEX" enabled="true" />
-            <object-type name="CONSTRAINT" enabled="true" />
-            <object-type name="DATASET_TRIGGER" enabled="true" />
-            <object-type name="DATABASE_TRIGGER" enabled="true" />
-            <object-type name="SYNONYM" enabled="true" />
-            <object-type name="SEQUENCE" enabled="true" />
-            <object-type name="PROCEDURE" enabled="true" />
-            <object-type name="FUNCTION" enabled="true" />
-            <object-type name="PACKAGE" enabled="true" />
-            <object-type name="TYPE" enabled="true" />
-            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
-            <object-type name="ARGUMENT" enabled="true" />
-            <object-type name="DIMENSION" enabled="true" />
-            <object-type name="CLUSTER" enabled="true" />
-            <object-type name="DBLINK" enabled="true" />
-          </object-type-filter>
-          <object-name-filters />
-        </object-filters>
-      </connection>
-    </connections>
+    <connections />
     <browser-settings>
       <general>
         <display-mode value="TABBED" />

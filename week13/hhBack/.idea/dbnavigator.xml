@@ -24,15 +24,14 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes>
-      <connection connection-id="55518bf1-2137-414d-aa87-0e519d664034">
-        <schema name="main" object-types="column, table, view" />
+      <connection connection-id="f0768ad2-ce20-4764-a581-5b6c3d9845f5">
+        <schema name="main" object-types="view, table, column" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="55518bf1-2137-414d-aa87-0e519d664034">
-      <console name="db.sqlite3" type="STANDARD" schema="main" session="Main">select * from api_vacancy;
-select * from api_company;
+    <connection id="f0768ad2-ce20-4764-a581-5b6c3d9845f5">
+      <console name="Connection" type="STANDARD" schema="main" session="Main">select * from api_company;
 
 insert into api_company(name,description,city,address) values('Google','Future is near','London','Baker street,21');
 insert into api_company(name,description,city,address) values('Sony','Amazing sound','Seoul','Centre palace');
@@ -41,7 +40,7 @@ insert into api_company(name,description,city,address) values('Samsung','Unbelie
 insert into api_company(name,description,city,address) values('Space X','Space is ours','Washigton','White House');
 
 -- HERE WILL BE ALL VACANCIES
- 
+ select * from api_vacancy;
 -- here vacancions for  GOOGLE
 insert into api_vacancy(name, description, salary, company_id)
  values ('Web designer','To make prints and visualize people mind',234.45 ,1);
@@ -87,7 +86,7 @@ insert into api_vacancy(name, description, salary, company_id)
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="55518bf1-2137-414d-aa87-0e519d664034" />
+    <connection id="f0768ad2-ce20-4764-a581-5b6c3d9845f5" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -112,9 +111,9 @@ insert into api_vacancy(name, description, salary, company_id)
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="55518bf1-2137-414d-aa87-0e519d664034" active="true">
+      <connection id="f0768ad2-ce20-4764-a581-5b6c3d9845f5" active="true">
         <database>
-          <name value="db.sqlite3" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -127,7 +126,7 @@ insert into api_vacancy(name, description, salary, company_id)
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week11\hhBack\db.sqlite3" schema="main" />
+            <file path="C:\Users\ZeuS\Desktop\WebDev2020\week13\hhBack\db.sqlite3" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
